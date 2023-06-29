@@ -1,0 +1,142 @@
+*{
+    font-family: Comic Sans MS;
+}
+button{
+    cursor: pointer;
+    height: 50px;
+}
+#summer{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,#43cea2, #185a9d);
+    color: white;
+}
+
+#spring{
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,#fdfc47, #24fe41);
+    color: white;
+}
+#autumn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,#dad299, #b0dab9);
+    color: white;
+}
+#winter{
+    padding: 10px 22px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,#e6dada, #274046);
+    color: white;
+}
+#buttons{
+    display: flex;
+    width: 100%;    
+}
+#weather{
+    width: 65%;
+    display: flex;
+    padding-left: 6 0px;
+    margin-bottom: 40px;
+}
+#weather button{
+    margin-right: 20px;
+}
+#control{
+    position: relative;
+    width:35%;
+    display: flex;
+    padding-left: 45%;
+}
+#control button{
+    margin-right: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #274046;
+    color: white;
+    padding: 0px 20px;
+}
+#state{
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    font-size: 30px;
+}
+#gameName{
+    margin-left: 42%;
+    letter-spacing: 10px;
+    background: linear-gradient(to right,red, blue,orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#addingGrass,#addingGrassEater {
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 5px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#addingGrass:before, #addingGrassEater:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#addingGrass:after,#addingGrassEater:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
